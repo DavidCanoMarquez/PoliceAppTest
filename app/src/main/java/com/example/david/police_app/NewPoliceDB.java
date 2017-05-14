@@ -45,7 +45,6 @@ public class NewPoliceDB {
         public static final String TEAM_CHIEF = "Team_chief";
         public static final String TEAM_COMPOSANTS = "Team_composants";
 
-        public static final String TEAM_ID_INTERVENTION = "Team_id_intervention";
 
 
         //Table team create statement
@@ -54,9 +53,7 @@ public class NewPoliceDB {
                 + TEAM_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
                 + TEAM_CHIEF + " TEXT, "
                 + TEAM_COMPOSANTS + " INTEGER, "
-                + TEAM_ID_INTERVENTION + " INTEGER, "
-                + "FOREIGN KEY("+ TEAM_ID_INTERVENTION + ") REFERENCES "
-                + TableIntervention.TABLE_INTERVENTION + "(" + TableIntervention.INTERVENTION_ID +") "
+
                 + ");";
     }
 

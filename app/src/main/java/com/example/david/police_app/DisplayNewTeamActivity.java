@@ -30,6 +30,7 @@ public class DisplayNewTeamActivity extends AppCompatActivity {
     private OfficerDataSource ods;
 
     private RadioGroup chief;
+    private LinearLayout composant;
 
 
     @Override
@@ -106,29 +107,7 @@ public class DisplayNewTeamActivity extends AppCompatActivity {
         List<Intervention> interventions = new ArrayList<Intervention>();
 
 
-        //insert interventions
 
- interventions=ids.getAllInterventions();
-
-       for (int i = 0; i < interventions.size(); i++) {
-
-            // Add Buttons
-           CheckBox button = new CheckBox(this);
-            String s = interventions.get(i).getInterName();
-            button.setText(s);
-           button.setTransitionName(s+i);
-           for(int j=i+1;j<interventions.size();j++){
-               if(interventions.get(i).getInterName().equals(interventions.get(j).getInterName())){
-
-                   i=i+1;
-               }
-
-           }
-            inter.addView(button);
-
-
-
-        }
 
     }
 
@@ -157,12 +136,40 @@ public class DisplayNewTeamActivity extends AppCompatActivity {
             }
         }
 
+
+
+        composant = (LinearLayout) findViewById(R.id.composants);
+        CheckBox composantButton;
+        String composantName="";
+        int idComposant;
+
+
+        count = composant.getChildCount();
+
+        for (int i=0;i<count;i++) {
+            composantButton = (CheckBox)composant.getChildAt(i);
+            if (composantButton.isChecked()) {
+                composantName = composantButton.getText().toString();
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
         List<Team> teams = new ArrayList<Team>();
         teams = tds.getAllTeams();
-        id = teams.size()+10;
+        id = teams.size();
 
 
-        Team t1 = new Team(id,name,"David");
+        Team t1 = new Team(id,name,composantName);
 
         tds.createTeam(t1);
 

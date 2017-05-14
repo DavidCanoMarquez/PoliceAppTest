@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,9 @@ import DataSource.TeamDataSource;
 
 
 public class DisplayTeamsActivity extends AppCompatActivity {
+
+    TeamDataSource tds;
+    public static final String EXTRA_MESSAGE1 = "com.example.david.police_app.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +79,7 @@ public class DisplayTeamsActivity extends AppCompatActivity {
     public void showNewTeam(View view){
         //show officers
         Intent intent = new Intent(this, DisplayNewTeamActivity.class);
+
         startActivity(intent);
     }
 
@@ -82,6 +87,8 @@ public class DisplayTeamsActivity extends AppCompatActivity {
     public void showInfosTeam(View view){
         //show teams
         Intent intent = new Intent(this, DisplayInfosTeamActivity.class);
+        String message = String.valueOf(((Button)view).getText());
+        intent.putExtra(EXTRA_MESSAGE1, message);
         startActivity(intent);
     }
 

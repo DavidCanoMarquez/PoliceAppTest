@@ -71,6 +71,30 @@ public class OfficerDataSource {
 
         return officer;
     }
+    /**
+     * Find one Officer by Id
+     */
+    public Officer getOfficerName(String lastname){
+        String sql = "SELECT * FROM " + NewPoliceDB.TableOfficer.TABLE_OFFICER +
+                " WHERE " + NewPoliceDB.TableOfficer.OFFICER_LASTNAME + " = " + lastname;
+
+        Cursor cursor = this.db.rawQuery(sql, null);
+
+        if(cursor != null){
+            cursor.moveToFirst();
+        }
+
+        Officer officer = new Officer();
+        officer.setId_Officer(cursor.getInt(cursor.getColumnIndex(NewPoliceDB.TableOfficer.OFFICER_ID)));
+        officer.setFirstname(cursor.getString(cursor.getColumnIndex(NewPoliceDB.TableOfficer.OFFICER_FIRSTNAME)));
+        officer.setLastname(cursor.getString(cursor.getColumnIndex(NewPoliceDB.TableOfficer.OFFICER_LASTNAME)));
+        officer.setPhone(cursor.getString(cursor.getColumnIndex(NewPoliceDB.TableOfficer.OFFICER_PHONE)));
+        officer.setType(cursor.getString(cursor.getColumnIndex(NewPoliceDB.TableOfficer.OFFICER_TYPE)));
+        officer.setId_Team(cursor.getInt(cursor.getColumnIndex(NewPoliceDB.TableOfficer.OFFICER_ID_TEAM)));
+
+
+        return officer;
+    }
 
     /**
      * Find one Officer by team
@@ -122,51 +146,6 @@ public class OfficerDataSource {
 
         return officers;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /**
-     * Insert a new officer
-
-    public long createOfficer(Officer officer){
-        long id;
-        ContentValues values = new ContentValues();
-        values.put(NewPoliceDB.TableOfficer.OFFICER_FIRSTNAME, officer.getFirstname());
-        values.put(NewPoliceDB.TableOfficer.OFFICER_LASTNAME, officer.getLastname());
-        values.put(NewPoliceDB.TableOfficer.OFFICER_PHONE, officer.getPhone());
-        values.put(NewPoliceDB.TableOfficer.OFFICER_TYPE, officer.getType());
-        values.put(NewPoliceDB.TableOfficer.OFFICER_ID_TEAM, officer.getId_Team());
-
-
-        id = this.db.insert(NewPoliceDB.TableOfficer.TABLE_OFFICER, null, values);
-
-        return id;
-    }
-     */
-
 
 
     /**

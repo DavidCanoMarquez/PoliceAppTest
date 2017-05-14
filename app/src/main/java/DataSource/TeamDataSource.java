@@ -72,7 +72,7 @@ public class TeamDataSource {
         }
 
         Team team = new Team();
-        team.setIdTeam(cursor.getLong(cursor.getColumnIndex(NewPoliceDB.TableTeam.TEAM_ID)));
+        team.setIdTeam(cursor.getInt(cursor.getColumnIndex(NewPoliceDB.TableTeam.TEAM_ID)));
         team.setTeamChief(cursor.getString(cursor.getColumnIndex(NewPoliceDB.TableTeam.TEAM_CHIEF)));
         team.setTeamComposant(cursor.getString(cursor.getColumnIndex(NewPoliceDB.TableTeam.TEAM_COMPOSANTS)));
 
@@ -96,29 +96,10 @@ public class TeamDataSource {
     /**
      * Delete a Team
      */
-    public void deleteTeam(long id) {
+    public void deleteTeam(Team team) {
+
         this.db.delete(NewPoliceDB.TableTeam.TABLE_TEAM, NewPoliceDB.TableTeam.TEAM_ID + " = ?",
-                new String[]{String.valueOf(id)});
-    }
-
-//voir!!!!!!!!!
-    public String[] getAllSpinnerContent(){
-
-        String query = "SELECT"+NewPoliceDB.TableTeam.TEAM_ID+" FROM " + NewPoliceDB.TableTeam.TABLE_TEAM;
-        Cursor cursor = this.db.rawQuery(query, null);
-        ArrayList<String> spinnerContent = new ArrayList<String>();
-        if(cursor.moveToFirst()){
-            do{
-                String word = cursor.getString(cursor.getColumnIndexOrThrow("content"));
-                spinnerContent.add(word);
-            }while(cursor.moveToNext());
-        }
-        cursor.close();
-
-        String[] allSpinner = new String[spinnerContent.size()];
-        allSpinner = spinnerContent.toArray(allSpinner);
-
-        return allSpinner;
+                new String[]{String.valueOf(team.getIdTeam())});
     }
 
 

@@ -102,12 +102,7 @@ public class DisplayOfficersActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /** Called when the user taps the view_officers button**/
-    public void showInfosOfficer(View view){
 
-        Intent intent = new Intent(this, DisplayInfosOfficerActivity.class);
-        startActivity(intent);
-    }
 
 
 
