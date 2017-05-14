@@ -13,7 +13,6 @@ import android.widget.RadioGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import Constructors.Intervention;
 import Constructors.Officer;
 import Constructors.Team;
 import DataSource.InterventionDataSource;
@@ -90,7 +89,7 @@ public class DisplayNewTeamActivity extends AppCompatActivity {
             button.setId(btnId);
             //Ajout de l'action listener
 
-            //set onclick
+
             for (int j = i + 1; j < officers.size(); j++) {
                 if (officers.get(i).getPhone().equals(officers.get(j).getPhone())) {
                     i = i + 1;
@@ -99,14 +98,6 @@ public class DisplayNewTeamActivity extends AppCompatActivity {
             }
             composants.addView(button);
         }
-
-        // Create a LinearLayout element
-        LinearLayout inter = (LinearLayout) findViewById(R.id.inter);
-       // interventionsLayout.setOrientation(LinearLayout.VERTICAL);
-
-        List<Intervention> interventions = new ArrayList<Intervention>();
-
-
 
 
     }
@@ -166,7 +157,7 @@ public class DisplayNewTeamActivity extends AppCompatActivity {
 
         List<Team> teams = new ArrayList<Team>();
         teams = tds.getAllTeams();
-        id = teams.size();
+        id = teams.size()+10;
 
 
         Team t1 = new Team(id,name,composantName);

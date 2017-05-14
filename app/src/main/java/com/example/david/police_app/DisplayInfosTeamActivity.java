@@ -88,35 +88,6 @@ public class DisplayInfosTeamActivity extends AppCompatActivity{
 
         }
 
-
-
-        officers = ods.getAllOfficers();
-
-        for (int i = 0; i < officers.size(); i++) {
-
-            // Add Buttons
-            final RadioButton button = new RadioButton(this);
-            int btnId = (int) officers.get(i).getId_Officer();
-            String s = officers.get(i).getLastname();
-            button.setText(s);
-            button.setId(btnId);
-            if(team.getTeamComposant().toUpperCase().equals(s.toUpperCase()))
-                button.setChecked(true);
-
-
-            for (int j = i + 1; j < officers.size(); j++) {
-                if (officers.get(i).getPhone().equals(officers.get(j).getPhone())) {
-                    i = i + 1;
-                }
-
-            }
-
-            chief.addView(button);
-        }
-
-
-
-
         // Create a LinearLayout element
         LinearLayout composants = (LinearLayout) findViewById(R.id.composants);
 
@@ -131,13 +102,12 @@ public class DisplayInfosTeamActivity extends AppCompatActivity{
             //String composant = team.getTeamComposant();
 
             if(team.getTeamComposant().toUpperCase().equals(s.toUpperCase())) {
-                //button.setChecked(true);
+                button.setChecked(true);
             }
             //boucle to show just one each officer
-            for(int j=i+1;j<officers.size();j++){
-                if(officers.get(i).getPhone().equals(officers.get(j).getPhone())){
-
-                    i=i+1;
+            for (int j = i + 1; j < officers.size(); j++) {
+                if (officers.get(i).getPhone().equals(officers.get(j).getPhone())) {
+                    i = i + 1;
                 }
 
             }
