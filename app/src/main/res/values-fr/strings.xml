@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="addIntervention">Ajout Intervention</string>
+    <string name="addOfficer">Ajout Officier</string>
+    <string name="addTeam">Ajout Equipe</string>
+    <string name="add_team">Ajout Equipe</string>
+    <string name="assistantChief">Chef adjoint</string>
+    <string name="back_button">Retour</string>
+    <string name="captain">Capitaine</string>
+    <string name="colonel">Colonel</string>
+    <string name="commissioner">Commissaire</string>
+    <string name="delete">Supprimer</string>
+    <string name="deputyChief">Chef député</string>
+    <string name="firstname">Prénom</string>
+    <string name="inspector">Inspecteur</string>
+    <string name="lastname">Nom</string>
+    <string name="officer">Officier</string>
+    <string name="officers">OFFICIERS</string>
+    <string name="other">Autre</string>
+    <string name="phone">Telephone</string>
+    <string name="pref_lang_summary">Modifier la langue de l\'application</string>
+    <string name="pref_lang_title">Choisissez votre langue</string>
+    <string name="sergeant">Sergent</string>
+    <string name="settings">Paramètres</string>
+    <string name="submit">Valider</string>
+    <string name="teamNumber">Numéro équipe</string>
+    <string name="teams">EQUIPES</string>
+    <string name="update">Modifier</string>
+    <string name="interventions">INTERVENTIONS</string>
+    <string name="lieutenant">Lieutenant</string>
+    <string name="detective">Detective</string>
+    <string name="info_intervention">Info intervention</string>
+    <string name="info_officier">Info officier</string>
+    <string name="info_team">Info équipe</string>
+</resources>

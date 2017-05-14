@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.david.police_app">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/police"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/police"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCv8GGQ9GgQziBYiqzyKYMMKzC9uX3nvvk"/>
+
+        <activity android:name=".MainActivity"
+            android:configChanges="locale|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity android:name=".DisplayOfficersActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/officers">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".DisplayTeamsActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/teams">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".DisplayInterventionsActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/interventions">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".DisplayNewOfficerActivity"
+            android:parentActivityName=".DisplayOfficersActivity"
+            android:label="@string/addOfficer">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayOfficersActivity" />
+        </activity>
+
+        <activity android:name=".DisplayNewTeamActivity"
+            android:parentActivityName=".DisplayTeamsActivity"
+            android:label="@string/addTeam">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayOfficersActivity" />
+        </activity>
+
+        <activity android:name=".DisplayNewInterventionActivity"
+            android:parentActivityName=".DisplayInterventionsActivity"
+            android:label="@string/addIntervention">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayOfficersActivity" />
+        </activity>
+
+
+        <activity android:name=".DisplayInfosOfficerActivity"
+            android:parentActivityName=".DisplayOfficersActivity"
+            android:label="@string/info_officier">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayOfficersActivity" />
+        </activity>
+
+        <activity android:name=".DisplayInfosTeamActivity"
+            android:parentActivityName=".DisplayTeamsActivity"
+            android:label="@string/info_team">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayTeamsActivity" />
+        </activity>
+
+        <activity android:name=".DisplayInfoInterventionActivity"
+            android:parentActivityName=".DisplayInterventionsActivity"
+            android:label="@string/info_intervention">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayInterventionsActivity" />
+        </activity>
+
+    </application>
+
+</manifest>

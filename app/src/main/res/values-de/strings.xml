@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="addIntervention">Einsatz adden</string>
+    <string name="addOfficer">Offizier adden</string>
+    <string name="addTeam">Team adden</string>
+    <string name="add_team">Team adden</string>
+    <string name="assistantChief">Unterleiter</string>
+    <string name="back_button">Zurück</string>
+    <string name="captain">Hauptmann</string>
+    <string name="colonel">Oberst</string>
+    <string name="commissioner">Kommissar</string>
+    <string name="delete">Löschen</string>
+    <string name="detective">Detektiv</string>
+    <string name="firstname">Vorname</string>
+    <string name="inspector">Inspektor</string>
+    <string name="interventions">EINSÄTZE</string>
+    <string name="lastname">Name</string>
+    <string name="lieutenant">Oberleutnant</string>
+    <string name="officer">Offizier</string>
+    <string name="officers">OFFIZIERN</string>
+    <string name="other">Ander</string>
+    <string name="phone">Telefon</string>
+    <string name="pref_lang_summary">App Sprach ändern</string>
+    <string name="pref_lang_title">Wählen Sie Ihre Sprache</string>
+    <string name="sergeant">Unteroffizier</string>
+    <string name="settings">Einstellungen</string>
+    <string name="submit">Freigeben</string>
+    <string name="teamNumber">Team Nummer</string>
+    <string name="teams">TEAMS</string>
+    <string name="update">Ändern</string>
+    <string name="deputyChief">Hauptleiter</string>
+    <string name="info_intervention">Einsatz Info</string>
+    <string name="info_officier">Offizier Info</string>
+    <string name="info_team">Team Info</string>
+</resources>

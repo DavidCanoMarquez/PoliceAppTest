@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">PoliceVS</string>
+    <string name="officers">OFFICERS</string>
+    <string name="teams">TEAMS</string>
+    <string name="interventions">INTERVENTIONS</string>
+    <string name="back_button">Back</string>
+    <string name="addOfficer">Add Officer</string>
+    <string name="addTeam">Add Team</string>
+    <string name="addIntervention">Add Intervention</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="phone">Phone</string>
+    <string name="commissioner">Police Commissioner</string>
+    <string name="assistantChief">Assistant Chief</string>
+    <string name="deputyChief">Deputy Chief</string>
+    <string name="inspector">Inspector</string>
+    <string name="lieutenant">Lieutenant</string>
+    <string name="major" translatable="false">Major</string>
+    <string name="colonel">Colonel</string>
+    <string name="sergeant">Sergeant</string>
+    <string name="detective">Detective</string>
+    <string name="officer">Officer</string>
+    <string name="captain">Captain</string>
+    <string name="other">Other</string>
+    <string name="teamNumber">Team Number</string>
+    <string name="submit">Submit</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="add_team">Add team</string>
+    <string name="settings">Settings</string>
+    <string name="pref_lang_title">Choose your language</string>
+    <string name="pref_lang_summary">Change the application language</string>
+    <string name="info_officier">Info officier</string>
+    <string name="info_team">Info team</string>
+    <string name="info_intervention">Info intervention</string>
+</resources>
