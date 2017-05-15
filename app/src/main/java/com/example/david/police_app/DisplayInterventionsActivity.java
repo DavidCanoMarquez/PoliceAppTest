@@ -19,6 +19,9 @@ import DataSource.TeamDataSource;
 
 public class DisplayInterventionsActivity extends AppCompatActivity {
 
+    InterventionDataSource ids;
+    public static final String EXTRA_MESSAGE2 = "com.example.david.police_app.MESSAGE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +87,8 @@ public class DisplayInterventionsActivity extends AppCompatActivity {
     public void showInfosIntervention(View view){
         //show interventions
         Intent intent = new Intent(this, DisplayInfoInterventionActivity.class);
+        String message = String.valueOf(((Button)view).getText());
+        intent.putExtra(EXTRA_MESSAGE2, message);
         startActivity(intent);
     }
 

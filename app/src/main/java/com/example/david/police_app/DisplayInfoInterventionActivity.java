@@ -9,7 +9,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +20,13 @@ import DataSource.TeamDataSource;
 
 
 public class DisplayInfoInterventionActivity extends AppCompatActivity {
-    private EditText name, dateB,dateE,localisation,description;
+
     private String iname,idateB,idateE,ilocalisation,idescription;
     private int id;
     private LinearLayout linearLayout,llt;
-    private RadioGroup team;
+    //private RadioGroup team;
     private List<Team> teams;
-    private RadioButton hight, medium,low;
+
     private NewDataBaseHelper db;
     private CheckBox button;
     private InterventionDataSource ids;
@@ -39,11 +38,41 @@ public class DisplayInfoInterventionActivity extends AppCompatActivity {
     private CheckBox cb;
     private String sel;
     private Intervention i1;
+    private RadioButton hight,medium,low;
+    private EditText name, description, dateB, dateE, localisation;
+    private LinearLayout team;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_intervention_activity);
+
+        ids = new InterventionDataSource(this);
+        interventions = ids.getAllInterventions();
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(DisplayInterventionsActivity.EXTRA_MESSAGE2);
+
+        intervention = ids.getInterventionById(Integer.parseInt(message));
+
+
+        name = (EditText) findViewById(R.id.name);
+        name.setText(intervention.getInterName());
+
+        description = (EditText) findViewById(R.id.description);
+        description.setText(intervention.getIntDescription());
+
+        dateB = (EditText) findViewById(R.id.dateB);
+        dateB.setText(intervention.getDateBegin());
+
+        dateE = (EditText) findViewById(R.id.dateE);
+        dateE.setText(intervention.getDateEnd());
+
+        localisation = (EditText) findViewById(R.id.localisation);
+        localisation.setText(intervention.getLocalisation());
+
+
+
+
 
         db = new NewDataBaseHelper(this);
         TeamDataSource tds = new TeamDataSource(this);
